@@ -1,12 +1,14 @@
 #!/bin/bash
+
+# set sometimes is not working??
 set -e
 
 echo "  ----- clone application repository -----  "
-git clone https://github.com/mhanna1/raddit.git
+echo git clone https://github.com/mhanna1/raddit.git
 
 echo "  ----- install dependent gems -----  "
 cd ./raddit
-bundle install
+sudo bundle install
 
 echo "  ----- start the application -----  "
 sudo systemctl start raddit
